@@ -1,0 +1,18 @@
+<%- include("partials/header"); %> 
+
+
+
+<% blogs.forEach(function(blog){ %>
+    <h1><%= blog.heading %> </h1>
+    <p><%=  blog.para.substring(0,100)+ " ..."%> 
+    <a href="/posts/ <%= blog._id %>" >Read More</a>
+    </p>
+  
+
+<% })  %> 
+   <div>
+    <button type="button" class="btn btn-compose" onclick="window.location.href='/compose';">Compose</button>
+   </div>
+
+
+ <%- include("partials/footer"); %> 
